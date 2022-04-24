@@ -1,0 +1,78 @@
+{
+  "proxy": "http://localhost:8080",
+  "name": "hr",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://olajouni.github.io/HRfrontend",
+  "dependencies": {
+    "@date-io/date-fns": "^2.13.1",
+    "@date-io/dayjs": "^2.13.1",
+    "@date-io/luxon": "^2.13.1",
+    "@date-io/moment": "^2.13.1",
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/interaction": "^5.11.0",
+    "@fullcalendar/list": "^5.11.0",
+    "@fullcalendar/react": "^5.11.0",
+    "@fullcalendar/timegrid": "^5.11.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/x-date-pickers": "^5.0.0-alpha.1",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "apexcharts": "^3.33.1",
+    "axios": "^0.26.1",
+    "bootstrap": "^5.1.3",
+    "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
+    "http-proxy-middleware": "^2.0.4",
+    "install": "^0.13.0",
+    "json-server": "^0.17.0",
+    "moment": "^2.29.2",
+    "npm": "^8.5.1",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.9",
+    "react-big-calendar": "^0.38.9",
+    "react-bootstrap": "^2.3.0",
+    "react-datepicker": "^4.7.0",
+    "react-datetime": "^3.1.1",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "6",
+    "react-scripts": "5.0.0",
+    "react-table": "^7.7.0",
+    "redux": "^4.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "json-server": "json-server --watch db.json --port 3000",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

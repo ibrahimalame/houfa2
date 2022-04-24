@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+}
+
+.listContainer {
+  flex: 6;
+}
+
+.starred {
+  height: 500px;
+  padding: 20px;
+  width: 96.5%;
+  background-color: white;
+}

@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+}
+.listContainer {
+  flex: 6;
+}
+
+.calendar {
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}

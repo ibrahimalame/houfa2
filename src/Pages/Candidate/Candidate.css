@@ -1,0 +1,53 @@
+.list {
+  display: flex;
+}
+
+.listContainer {
+  flex: 6;
+}
+
+.datatable {
+  height: 500px;
+  padding: 20px;
+  width: 96.5%;
+  background-color: white;
+}
+
+.candidate {
+  flex: 4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.candidateProfile {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.userListUser {
+  display: flex;
+  align-items: center;
+}
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.userListView {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  align-items: center;
+  margin-left: 30px;
+  color: white;
+  cursor: pointer;
+}

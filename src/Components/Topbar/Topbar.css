@@ -1,0 +1,44 @@
+.topbar {
+  height: 50px;
+  border-bottom: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid lightgray;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.items {
+  align-items: center;
+  display: flex;
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+}
+
+.body {
+  padding: 20px;
+}
