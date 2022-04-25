@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
-import MyUser from "../User/MyUser";
-import { Route, Routes } from "react-router-dom";
 
-export default class MyCandidate extends Component {
+
+export default class Vacancy extends Component {
     constructor(props) {
         super(props);
         this.state = {isToggleOn: true};
@@ -21,6 +20,7 @@ export default class MyCandidate extends Component {
       }
   render() {
     return (
+       
         <tr>
             <td><Form><Form.Check 
                 type='checkbox'
@@ -29,15 +29,9 @@ export default class MyCandidate extends Component {
                 </Form>
             </td>
         <td> {this.props.id} </td>
-        <td> {this.props.name} </td>
-        <td> {this.props.vacancy} </td>
-        <td> {this.props.phone} </td>
-        <td> {this.props.email} </td>
-        <td> {this.props.location} </td>
+        <td> {this.props.title} </td>
+        <td> {this.props.time} </td>
         <td>
-                
-
-            
             <Link to={{ 
                 pathname: `/user/${this.props.id}`,
                 state: { id: this.props.id }

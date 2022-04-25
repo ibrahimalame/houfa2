@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import MyCandidate from "./MyCandidate";
+import Candidate from "./Candidate";
 import axios from "axios";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Topbar from "../../Components/Topbar/Topbar";
 import Table from 'react-bootstrap/Table'
 
-export default class MyCandidates extends Component {
+export default class Candidates extends Component {
   constructor(){
     super();
     this.state = { candidates : []}
   }
 
   componentDidMount() {
-    const url = `http://localhost:8080/employee/all`;
+    const url = `http://localhost:8080/candidate/all`;
     axios.get(url)
       .then(res => {
         const candidates = res.data;
@@ -22,14 +22,13 @@ export default class MyCandidates extends Component {
   }
   mapping(x){
       const candidates = x.map( candidate =>
-          <MyCandidate 
+          <Candidate 
              key={candidate.id} 
              id={candidate.id} 
-             name={candidate.name} 
-             vacancy={candidate.vacancy} 
+             first_name={candidate.first_name} 
+             last_name={candidate.last_name} 
              email={candidate.email} 
-             phone={candidate.phone} 
-             location={candidate.location}
+             phone_number={candidate.phone_number} 
           />
         );
         return candidates;
@@ -48,9 +47,9 @@ export default class MyCandidates extends Component {
                 <th>#</th>
                   <th>ID</th>
                   <th>User Name</th>
-                  <th>Vacancy</th>
-                  <th>Phone</th>
+                  <th>Last Name</th>
                   <th>Email</th>
+                  <th>Phone</th>
                   <th>Applicant status</th>
                   <th>Star Applicant</th>
                 </tr>

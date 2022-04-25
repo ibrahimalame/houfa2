@@ -15,11 +15,10 @@ import  Person  from "./Person";
 const User = () => {
   const [user, setUser] = useState({
     id:"",
-    name: "",
-    vacancy: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    phone: "",
-    location: "",
+    phone_number: "",
   });
 
   const  id = useParams()['userId'];
@@ -28,9 +27,10 @@ const User = () => {
   }, []);
   
   const loadUser = async () => {
-    const url = `http://localhost:8080/employee/find/${id}`;
+    const url = `http://localhost:8080/candidate/find/${id}`;
     const res = await axios.get(url);
     setUser(res.data);
+
   };
   return (
     <div className="list">
@@ -39,7 +39,7 @@ const User = () => {
         <Topbar />
         <div className="user">
           <MyCalendar />
-          <Person key={user.id} name={user.name} vacancy={user.vacancy} email={user.email} phone={user.phone} location={user.location}/> 
+          <Person key={user.id} first_name={user.first_name} last_name={user.last_name} email={user.email} phone_number={user.phone_number} /> 
           <hr />
           <h1>HR Manager section</h1>
           <div className="hrSection">
