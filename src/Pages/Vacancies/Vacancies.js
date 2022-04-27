@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import Bouton from "../../Components/Modal/Bouton";
+import NavBar from "../../Components/NavBar";
 
 import "./Vacancies.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
@@ -8,14 +8,21 @@ import Topbar from "../../Components/Topbar/Topbar";
 import axios from "axios";
 import Vacancy from "./Vacancy";
 import Table from 'react-bootstrap/Table'
-
+import Modal from "../../Components/Modal/Modal";
+import { Button } from "react-bootstrap";
+import './Create.css'
 
 class Vacancies extends Component{
     constructor(){
         super();
         this.state = { vacancies : []}
       }
-    
+      state = {
+        visible:false
+    }
+    show = () => { this.setState({ visible: true})}
+    hide = () => { this.setState({ visible: false }) }
+
       componentDidMount() {
         console.log("Oui")
         const url = `http://localhost:8080/vacancy/all`;
@@ -36,17 +43,29 @@ class Vacancies extends Component{
           );
           return vacancies;
     }
-
+      handelCallback = (X) =>{
+          this.setState({vacancies:X})
+      }
     render(){
+      console.log("vavan")
+        console.log(this.props.handelCallback)
+        console.log("cies")
         return(
             <div className="list">
             <Sidebar />
             <div className="listContainer">
-            <Topbar />          
-              <Bouton />
+            {/* <Topbar />   */}
+            <NavBar miseajour={this.handelCallback}/>
+            {/* 
+             <Button onClick={this.show} className="adroite" variant="danger"> Add Vacancy</Button>
+                <Modal 
+                    visible={this.state.visible}
+                    hide = {this.hide}
+                    switch = {1}
+                /> */}
 
               <div className="datatable">
-              <Table striped bordered hover>
+              <Table striped bordered hover className="width">
               <thead>
                 <tr>
                 <th>#</th>

@@ -7,6 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 /* import 'semantic-ui-css/semantic.min.css'*/
 
+/* Fontawesome icones  */
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css'
+/* BootStrap 5.1  */
+import  '../node_modules/bootstrap/dist/css/bootstrap.css'
+import  '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -10,7 +10,7 @@ export default class Candidates extends Component {
     super();
     this.state = { candidates : []}
   }
-
+  
   componentDidMount() {
     const url = `http://localhost:8080/candidate/all`;
     axios.get(url)
@@ -39,8 +39,7 @@ export default class Candidates extends Component {
         <Sidebar />
         <div className="listContainer">
             <Topbar />
-
-
+            
             <Table striped bordered hover>
               <thead>
                 <tr>

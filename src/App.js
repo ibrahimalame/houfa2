@@ -1,34 +1,31 @@
 import "./App.css";
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
 import Vacancies from "./Pages/Vacancies/Vacancies";
 import Starred from "./Pages/Starred/Starred";
 import PCal from "./Pages/PCal/PCal";
-import User from "./Pages/User/User";
 import Candidates from "./Pages/Candidate/Candidates";
 import "react-datepicker/dist/react-datepicker.css";
+import Interviews from "./Pages/Candidate/Interviews";
+import CandidateList from "./Pages/Candidate/Candidates/CandidateList/CandidateList";
+import AddCandidate from "./Pages/Candidate/Candidates/AddCandidate/AddCandidate";
+import ViewCandidate from "./Pages/Candidate/Candidates/ViewCandidate/ViewCandidate";
+import EditCandidate from "./Pages/Candidate/Candidates/EditCandidate/EditCandidate";
+import Spinner from "./Components/Spinner/Spinner";
 
-function App() {
+let  App = () => {
   return (
-    <div className="h">
-      {/* <Topbar /> */}
-
-      <div className="container">
-        {/* <Sidebar /> */}
-        <div className="other">
-          <Routes>
-            {/* <Route exact path="/" element={<Form />}></Route> */}
-            {/* {<Route exact path="/" element={<Home />}></Route>} */}
-            <Route exact path="/applicants" element={<Candidates />}></Route>
-            {/* <Route exact path="/" element={<Vacancies />}></Route> */}
-            <Route exact path="/" element={<Vacancies />}></Route>
-            <Route exact path="/starred-applications"  element={<Starred />}></Route>
-            <Route exact path="/calendar" element={<PCal />}></Route>
-            <Route exact path="/user/:userId" element={<User />}></Route>
-          </Routes>
-        </div>
-      </div>
-    </div>
+      <React.Fragment>
+        <NavBar />
+      <Routes>
+          <Route path={'/'} element={<Navigate to={'/candidate/list'}/> }/>
+          <Route path={'/candidate/list'} element ={<CandidateList />} />
+          <Route path={'/candidate/add'} element ={<AddCandidate />} />
+          <Route path={'/candidate/view/:candidateId'} element ={<ViewCandidate />} />
+          <Route path={'/candidate/edit/:candidateId'} element ={<EditCandidate />} />
+      </Routes>
+      </React.Fragment>
   );
 }
 

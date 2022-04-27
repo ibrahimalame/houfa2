@@ -36,10 +36,9 @@ export default class Vacancy extends Component {
                 pathname: `/user/${this.props.id}`,
                 state: { id: this.props.id }
                 }}><Button variant="primary"> View </Button>
-            </Link>
-            
-                          
+            </Link>              
         </td>
+        <td></td>
         </tr>
     );
   }

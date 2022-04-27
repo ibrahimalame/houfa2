@@ -34,14 +34,14 @@ export default function Sidebar() {
           </li>
           <li className="sidebarListItem">
             <PeopleOutline className="sidebarIcon" />
-            <Link className="link" to="/applicants">
-              Applicants
+            <Link className="link" to="/candidates">
+              Candidates
             </Link>
           </li>
           <li className="sidebarListItem">
             <StarOutline className="sidebarIcon" />
             <Link className="link" to="/starred-applications">
-              Starred Applicants
+              Starred Candidates
             </Link>
           </li>
           <li className="sidebarListItem">

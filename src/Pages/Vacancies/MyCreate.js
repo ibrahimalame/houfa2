@@ -5,29 +5,19 @@ import Button from 'react-bootstrap/Button'
 import DatePicker from "react-datepicker";
 import axios from "axios";
 import './Create.css'
-import { BrowserRouter } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { Link,useEffect } from "react-router-dom";
 
-class Create extends Component{
+class MyCreate extends Component{
     constructor(props){
         super(props)
         this.state={title : "", date : new Date()}
-        console.log("const_create")
-            console.log(this.props)
-        console.log("const_create")
-        
     }
-    state = {
-        liste:{}
-    }
-    setListe = (X) => { this.setState({ liste: X})}
+  
     //handleClose = () => setShow(false);
     //handleShow = () => setShow(true); 
     sendData = () => {
         this.props.hide();
     }
-    sendDataToAPI = (liste)=>{
+    sendDataToAPI = ()=>{
         const j = this.state.date.getDate()
         const m = this.state.date.getMonth()+1
         const a = this.state.date.getFullYear()
@@ -42,34 +32,15 @@ class Create extends Component{
 
         .then(function (response) {
             console.log(response);
-            
         })
         .catch(function (error) {
             console.log(error);
         });
-        const getVacancies = (liste)=>{
-            const url = `http://localhost:8080/vacancy/all`;
-            axios.get(url)
-              .then(res => {
-                const vacancies = res.data;
-                
-                this.setListe(liste);
-              })
-    
-              console.log("brahim ALAME");
-              console.log(liste);
-              console.log("brahim ALAME");
-        }
-        getVacancies(liste);
-        
-        
-
         
 }
   render(){
     return (
         <>
-            <span className="adroite" onClick={this.sendData}>X</span>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Label>Title</Form.Label>
@@ -90,11 +61,9 @@ class Create extends Component{
             
             </Form.Group>
         </Form>
-        <Link to={{ 
-            pathname: `/`,
-            }}> <Button variant="success" onClick={this.sendDataToAPI()}>Submit</Button>
-          </Link>
-        
+        <Button variant="success" onClick={this.sendDataToAPI}>
+        Submit
+        </Button>
         <Button variant="secondary" className="adroite" onClick={this.sendData}>
         Quit
         </Button>
@@ -103,5 +72,5 @@ class Create extends Component{
   }
     
   }
- export default Create; 
+ export default MyCreate; 
  
