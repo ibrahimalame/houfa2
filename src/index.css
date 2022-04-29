@@ -11,3 +11,6 @@
   height: 200px;
   border-radius: 50%;
 }
+.monCadre:focus {
+  border: 3px solid #555;
+}

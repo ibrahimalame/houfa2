@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link, useNavigate} from 'react-router-dom'
 import {CandidateService} from "../../../../services/CandidateService";
+import axios from "axios";
 
 let AddCandidate = () => {
     let navigate = useNavigate();
@@ -25,7 +26,17 @@ let updateInput = (event) => {
 }
 let submitForm = async (event) => {
     event.preventDefault();
-    try{
+    axios.post('http://localhost:8080/candidate/add', state.candidate)
+
+        .then(function (response) {
+            console.log(response);
+            navigate('/candidate/list',{replace:true});
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    /*try{
         let response = await CandidateService.createCandidate(state.candidate);
         if(response){
             navigate('/candidate/list',{replace:true});
@@ -33,7 +44,7 @@ let submitForm = async (event) => {
     }catch (error){
         setState({...state,errorMessage: error.message});
         navigate('/candidate/add',{replace:true});
-    }
+    }*/
 }
 
 let {loading, candidate,errorMessage}=state
@@ -82,7 +93,7 @@ let {loading, candidate,errorMessage}=state
                                            name="phone_number" className="form-control" placeholder="Mobile"/>
                                 </div>
                                 <div className="mb-2">
-                                    <input type="email"
+                                    <input type="text"
                                            required={true}
                                            name="email"
                                            value = {candidate.email}
