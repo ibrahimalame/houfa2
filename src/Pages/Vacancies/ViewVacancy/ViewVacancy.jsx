@@ -65,7 +65,24 @@ import {format} from "date-fns";
                                                 <p className="h3 text-success fw-bold">{vacancy.title}</p>
                                             </li>
                                             <li className="list-group-item list-group-item-action">
+                                                <p className="h4 text-secondary fw-bold  my-2">Description</p>
                                               <span className="fw-bold">{vacancy.description}> </span>
+                                            </li>
+                                            <li className="list-group-item list-group-item-action">
+                                                <p className="h4 text-secondary fw-bold  my-2">Responsabilities</p>
+                                                <span className="fw-bold">{vacancy.resp}> </span>
+                                            </li>
+                                            <li className="list-group-item list-group-item-action">
+                                                <p className="h4 text-secondary fw-bold  my-2">Profile</p>
+                                                <span className="fw-bold">{vacancy.profile}> </span>
+                                            </li>
+                                            <li className="list-group-item list-group-item-action">
+                                                <p className="h4 text-secondary fw-bold  my-2">Duration</p>
+                                                <span className="fw-bold">{vacancy.duration}> </span>
+                                            </li>
+                                            <li className="list-group-item list-group-item-action">
+                                                <p className="h4 text-secondary fw-bold  my-2">Salary</p>
+                                                <span className="fw-bold">{vacancy.salary}> </span>
                                             </li>
                                             <li className="list-group-item list-group-item-action">
                                                 Application Closing Date: <span
