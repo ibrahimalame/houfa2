@@ -50,7 +50,7 @@ let submitForm = async (event) => {
 let {loading, candidate,errorMessage}=state
     return(
         <React.Fragment>
-            <pre>{JSON.stringify(candidate)}</pre>
+            {/*<pre>{JSON.stringify(candidate)}</pre>*/}
             <section className="add-candidate p-3">
                 <div className="container">
                     <div className="row">

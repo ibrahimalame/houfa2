@@ -71,7 +71,7 @@ let AddVacancy = () => {
 
     return(
         <React.Fragment>
-            <pre>{JSON.stringify(vacancy)}</pre>
+            {/*<pre>{JSON.stringify(vacancy)}</pre>*/}
             <section className="add-vacancy p-3">
                 <div className="container">
                     <div className="row">
