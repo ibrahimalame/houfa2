@@ -19,6 +19,7 @@ import ViewCandidate from "./Pages/Candidate/Candidates/ViewCandidate/ViewCandid
 import EditCandidate from "./Pages/Candidate/Candidates/EditCandidate/EditCandidate";
 import ApplyCandidate from "./Pages/Candidate/Candidates/ApplyCandidate/ApplyCandidate";
 import Spinner from "./Components/Spinner/Spinner";
+import Picker from "./Pages/Calendar/Picker";
 
 let  App = () => {
   return (
@@ -35,6 +36,7 @@ let  App = () => {
           <Route path={'/candidate/view/:candidateId'} element ={<ViewCandidate />} />
           <Route path={'/candidate/edit/:candidateId'} element ={<EditCandidate />} />
           <Route path={'/candidate/apply'} element ={<ApplyCandidate />} />
+          <Route exact path="/calendar" element={<Picker />}></Route>
       </Routes>
       </React.Fragment>
   );

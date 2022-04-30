@@ -22,17 +22,25 @@ let NavBar = () => {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                            <li className="nav-item">
+                            <Link to={'/'} className="nav-link">
+                                Home
+                            </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/vacancy/list">Vacancies</a>
+                            <Link to={'/vacancy/list'} className="nav-link">
+                                Vacancies
+                            </Link>
                             </li>
+                                <li className="nav-item">
+                                    <Link to={'/candidate/list'} className="nav-link">
+                                        Candidates
+                                    </Link>
+                                </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/candidate/list">Candidates</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Calendar</a>
+                                <Link to={'/calendar'} className="nav-link">
+                                    Calendar
+                                </Link>
                             </li>
                         </ul>
 
