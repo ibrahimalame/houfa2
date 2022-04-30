@@ -87,11 +87,11 @@ export default class Picker extends Component{
 
 
                 </div>
-                <p>{this.state.date.toLocaleDateString()}</p>
+                {/*<p>{this.state.date.toLocaleDateString()}</p>*/}
 
                 {this.state.candidates.map(candidate => console.log(candidate.first_name))}
 
-                <div className="container">
+                <div className="container my-5">
                     <div className="row">
                         <div className="col-md-6">
                             <select className="form-select form-select-lg mb-3"  aria-label="Default select example" onChange={(e) => handleChange1(e)}>
@@ -102,7 +102,7 @@ export default class Picker extends Component{
                         </div>
                         <div className="col-md-6">
                             <select className="form-select form-select-lg mb-3"  aria-label="Default select example" onChange={(e) => handleChange2(e)}>
-                                <option selected>Candidates</option>
+                                <option selected>Vacancies</option>
                                 {this.state.vacancies.map(candidate => <option value={candidate.id}>{candidate.title}</option>)}
                             </select>
                             <h1>{this.state.choixVacancy}</h1>
